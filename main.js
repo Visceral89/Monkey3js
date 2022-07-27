@@ -52,7 +52,7 @@ animate();
 // This functin will basicly add stuff like animations, but the most important part is render once a frame.
 function animate(){
     requestAnimationFrame(animate);
-    mesh.rotation.x += 0.005;
+    mesh.rotation.x += 0.01;
     mesh.rotation.y += 0.005;
 
     controls.update(); // Updates controls
@@ -70,7 +70,7 @@ function addStar(){
   scene.add(star)
 }
 
-Array(200).fill().forEach(addStar);
+Array(1000).fill().forEach(addStar);
 
 const backgroundTexture = new THREE.TextureLoader().load('images/bg2.jpg');
 scene.background = backgroundTexture;
